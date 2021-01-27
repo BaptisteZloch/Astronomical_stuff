@@ -16,7 +16,7 @@ namespace Test_ASCOM_form
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Focuser_form());
+            Application.Run(new Global_handling());
         }
     }
 }
