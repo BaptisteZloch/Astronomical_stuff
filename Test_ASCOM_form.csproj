@@ -44,8 +44,16 @@
     <Reference Include="ASCOM.SettingsProvider, Version=6.0.0.0, Culture=neutral, PublicKeyToken=565de7938946fba7, processorArchitecture=MSIL" />
     <Reference Include="ASCOM.Utilities, Version=6.0.0.0, Culture=neutral, PublicKeyToken=565de7938946fba7, processorArchitecture=MSIL" />
     <Reference Include="ASCOM.Utilities.Video, Version=6.1.0.0, Culture=neutral, PublicKeyToken=565de7938946fba7, processorArchitecture=MSIL" />
+    <Reference Include="ASquare.WindowsTaskScheduler, Version=1.6.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\ASquare.WindowsTaskScheduler.1.6.0.0\lib\Net45\ASquare.WindowsTaskScheduler.dll</HintPath>
+    </Reference>
+    <Reference Include="CSharpFITS_v1.1, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\CSharpFITS.1.1\lib\Net20\CSharpFITS_v1.1.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -57,16 +65,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Focuser_form.cs">
+    <Compile Include="Cooling_assistant_form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Focuser_form.Designer.cs">
-      <DependentUpon>Focuser_form.cs</DependentUpon>
+    <Compile Include="Cooling_assistant_form.Designer.cs">
+      <DependentUpon>Cooling_assistant_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Global_handling.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Global_handling.Designer.cs">
+      <DependentUpon>Global_handling.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Focuser_form.resx">
-      <DependentUpon>Focuser_form.cs</DependentUpon>
+    <EmbeddedResource Include="Cooling_assistant_form.resx">
+      <DependentUpon>Cooling_assistant_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Global_handling.resx">
+      <DependentUpon>Global_handling.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -77,6 +94,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
